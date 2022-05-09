@@ -1,0 +1,167 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "zapfi.project2",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.100.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zapfi.project2.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true,
+          "groupId": "$direct"
+        }
+      },
+      "localData": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/LocalData.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "zapfi.project2.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name":"main",
+          "pattern": "",
+          "target": "main"
+        },
+        {
+          "name": "randomnumber",
+          "pattern": "randomnumber",
+          "target": "randomnumber"
+        },
+        {
+          "name": "starships",
+          "pattern": "starships",
+          "target": "starships"
+        },
+        {
+          "name": "passwordrater",
+          "pattern": "passwordrater",
+          "target": "passwordrater"
+        },
+        {
+          "name": "passwordgenerator",
+          "pattern": "passwordgenerator",
+          "target": "passwordgenerator"
+        },
+        {
+          "name": "htmlprep",
+          "pattern": "htmlprep",
+          "target": "htmlprep"
+        }
+      ],
+      "targets": {
+        "main": {
+          "viewName": "Main",
+          "viewLevel": 1
+        },
+        "randomnumber": {
+          "viewName": "RandomNumber",
+          "viewLevel": 1
+        },
+        "starships": {
+          "viewName": "Starships",
+          "viewLevel": 1
+        },
+        "passwordrater": {
+          "viewName": "PasswordRater",
+          "viewLevel": 1
+        },
+        "passwordgenerator": {
+          "viewName": "PasswordGenerator",
+          "viewLevel": 1
+        },
+        "htmlprep": {
+          "viewName": "HTMLPrep",
+          "viewLevel": 1
+        }
+
+      }
+    },
+    "rootView": {
+      "viewName": "zapfi.project2.view.View1",
+      "type": "XML",
+      "async": true,
+      "id": "View1"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<mvc:View
+    controllerName="zapfi.project2.controller.Starships"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+                <Page id="randomPage" navButtonPress=".onNavPress" showNavButton="true" title="See some star ships">
+                  <Carousel class="sapUiContentPadding" loop="true">
+	                  	<Image src="/img/enterprisenextgen.webp" alt="Example picture of speakers" />
+		                  <Image src="/img/inside.webp" alt="Example picture of USB flash drive" />
+		                  <Image src="/img/yardenterprise.jfif" alt="Example picture of spotlight" />
+	                </Carousel>
+                </Page>
+</mvc:View>

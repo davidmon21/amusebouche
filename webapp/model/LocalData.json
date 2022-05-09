@@ -1,0 +1,28 @@
+{
+    "textAreas": {
+    "InputValue": "Enter text"
+    },
+    "PasswordRating": "1",
+    "pages" : [
+        {
+            "link": "randomnumber",
+            "niceName": "Random Number Generator"
+        },
+        {
+            "link": "starships",
+            "niceName": "Pictures of Starships"
+        },
+        {
+            "link": "passwordrater",
+            "niceName": "Password Rater"
+        },
+        {
+            "link": "passwordgenerator",
+            "niceName": "Password Generator"
+        },
+        {
+            "link": "htmlprep",
+            "niceName": "HTML Prepper"
+        }
+    ]
+}

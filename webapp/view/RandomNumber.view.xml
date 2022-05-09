@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="zapfi.project2.controller.RandomNumber"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+                <Page id="randomPage" navButtonPress=".onNavPress" showNavButton="true" title="Generate Random Number">
+                  <StepInput id="val2" displayPrecision="1" step="10" change="onChange" />
+                  <Text id="displayNumber" text="." />
+                </Page>
+</mvc:View>

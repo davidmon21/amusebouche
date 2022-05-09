@@ -1,0 +1,26 @@
+<mvc:View
+    controllerName="zapfi.project2.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:custom="zapfi.project2.control"
+>
+        <Page id="listPage" title="Links">
+            
+            <List id="list"
+                    class="sapUiResponsiveMargin"
+                    width="auto"
+                    items="{localData>/pages}">
+                <items>
+                    <StandardListItem type="Navigation" press="handleListItemPress" title="{localData>niceName}">
+                    <customData>
+                        <core:CustomData key="link" value="{localData>link}" />
+                    </customData>
+                    </StandardListItem>
+                </items>
+            </List>
+            <custom:CrazyText text="please help me" crazyMessage="NO no NO"/>
+        </Page>
+</mvc:View>

@@ -1,0 +1,38 @@
+<mvc:View
+    controllerName="zapfi.project2.controller.HTMLPrep"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page id="HTMLPrep" navButtonPress=".onNavPress" showNavButton="true" title="{i18n>title}">
+        <Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title text="{i18n>transi}"/>
+                </OverflowToolbar>
+            </headerToolbar>
+            <VBox alignItems="Center">
+                <Label text="HTML to Plain Text" />
+                <Switch id="toFrom" state="false" />
+                <TextArea 
+                    value="{localData>/textAreas/InputValue}"
+                    width="80vw"
+                    height="30vh"
+                    liveChange="handleLiveChange"
+                />
+            </VBox>
+        </Panel>
+        <Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title text="{i18n>transo}"/>
+                </OverflowToolbar>
+            </headerToolbar>
+            <VBox alignItems="Center">
+                <Text id="getValue" text="." />
+            </VBox>
+        </Panel>
+        <content />
+    </Page>
+</mvc:View>
